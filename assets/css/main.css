@@ -1,0 +1,12 @@
+#table1 {
+	display: none;
+}
+
+input, label, select {
+    margin: 5px;
+    padding: 5px;
+}
+
+.spacer {
+    margin-top: 20px; 
+}

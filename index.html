@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ginger Payments - Frontend Assignment</title>
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,600,300,700">
+    <!-- Bootstrap -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+<body>
+    <div class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar">
+                    </span>
+                    <span class="icon-bar">
+                    </span>
+                    <span class="icon-bar">
+                    </span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span>Ginger Payments</span>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <main>
+                <div class="row">            
+                    <div class="col-md-4">
+                        <aside>
+                            <div class="row spacer">
+                                <div class="col-md-12">
+                                    <button id="callback-button" class="form-control btn btn-primary">Callback</button> 
+                                </div>
+                            </div>
+                            <div class="row spacer">
+                                <div class="col-md-12">                        
+                                    <button id="promise-button" class="form-control btn btn-primary">Promise</button>
+                                </div>
+                            </div>
+
+                            <div class="row spacer">
+                                <div class="col-md-12 form-group">                        
+                                    <select id="filter-select" class="form-control">
+                                        <option value="creditcard">Credit Card</option>
+                                        <option value="bank-transfer">Bank Transfer</option>
+                                        <option value="ideal">iDeal</option>
+                                    </select>
+                                    <button id="payment-filter-button" class="form-control btn btn-primary">Filter Payment-Method</button>                
+                                </div>
+                            </div>
+
+                            <br />
+                            <form id="payment-form" class="form" method="post" action="http://localhost:3000/payments">
+                                <div class="form-group">
+                                    <label for="method">Method</label>
+                                    <select id="method" name="method" class="form-control">
+                                        <option value="creditcard">Credit Card</option>
+                                        <option value="bank-transfer">Bank Transfer</option>
+                                        <option value="ideal">iDeal</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="amount">Amount</label>
+                                    <input type="number" id="amount" name="amount" class="form-control" required>
+                                </div>    
+                                <div class="form-group">
+                                    <label for="currency">Currency</label>
+                                    <input type="text" id="currency" name="currency" class="form-control" required>
+                                    <input type="hidden" id="created" name="created">              
+                                </div>  
+                                <div class="form-group">
+                                    <label for="status">Status</label>
+                                    <select id="status" name="status" class="form-control">
+                                        <option value="accepted">Accepted</option>
+                                        <option value="denied">Denied</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="merchant">Merchant</label>
+                                    <input type="text" id="merchant" name="merchant" class="form-control" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Add payment" class="form-control btn btn-primary"></button>
+                                </div>
+                            </form>
+                            
+                        </aside>  
+                    </div>
+                    <div class="col-md-8">
+                        <section>
+                            <!-- Payments Table -->
+                            <table id="table1" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Method</th>
+                                        <th>Currency</th>
+                                        <th>Amount</th>
+                                        <th>Creation Date</th>
+                                        <th>Status</th>
+                                        <th>Merchant</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>                        
+                        </section>
+                    </div>
+                </div>                
+            </main>
+        </div>
+    </div>    
+
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/moment.min.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>
