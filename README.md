@@ -1,6 +1,6 @@
 # Ginger Payments Frontend Assignment
 
- ## Setup
+## Setup
  
  To install and start the JSON-server type the following command in your terminal:
  
@@ -8,14 +8,14 @@
  npm install && npm run start:api
  ``` 
 
- ## How to run
+## How to run
 
   1. npm install 
   2. run the JSON-server 
   3. open the index.html file or run a static server to see your code working
 
 
- ## Tests
+## Tests
 
  A very naive implementation of test can be run using:
 
