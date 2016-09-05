@@ -4526,6 +4526,15 @@
       "status": "accepted",
       "merchant": "CLTran",
       "id": 503
+    },
+    {
+      "method": "creditcard",
+      "amount": 11000,
+      "currency": "CLP",
+      "created": "Mon Sep 05 2016 10:31:29 GMT-0300 (CLT)",
+      "status": "accepted",
+      "merchant": "test",
+      "id": 504
     }
   ]
 }
