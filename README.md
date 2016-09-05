@@ -12,7 +12,7 @@
 
   1. npm install 
   2. run the JSON-server 
-  3. open the index.html file or run a static server to see your code working
+  3. open the index.html file or run a static server to see the code working
 
 
 ## Tests
